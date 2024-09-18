@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбери вариант табов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+            font-size: 2.5em;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .button:hover {
+            transform: scale(1.05);
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ВЫБЕРИ ВАРИАНТ ТАБОВ</h1>
+        <a href="menu.html" class="button">Вернуться на главный сайт</a> <!-- Кнопка для возврата на главный сайт -->
+    </header>
+
+    <main class="options">
+        <div style="text-align: center;">
+            <a href="easy.html" class="button">Легкие</a>
+            <a href="mid.html" class="button" style="background-color: #FF9800;">Средние</a>
+            <a href="hard.html" class="button" style="background-color: #F44336;">Сложные</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Музыкальный Сайт</p>
+    </footer>
+
+    <script>
+        // Эффект увеличения кнопок при наведении
+        const buttons = document.querySelectorAll('a.button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'scale(1.05)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
